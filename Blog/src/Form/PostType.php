@@ -3,7 +3,10 @@
 namespace App\Form;
 
 use App\Entity\Post;
+use Doctrine\DBAL\Types\TextType;
+use http\Client\Curl\User;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -16,7 +19,7 @@ class PostType extends AbstractType
             ->add('content')
             ->add('metaTitle')
             ->add('metaDescription')
-            ->add('Author')
+            //->add('Author')
             ->add('category')
         ;
     }
